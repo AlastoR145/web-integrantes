@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Integrantes</title>
+</head>
+<body>
+  <h2>Integrantes del Grupo</h2>
+  <ul id="lista"></ul>
+
+  <script>
+    fetch('/api/integrantes')
+      .then(res => res.json())
+      .then(data => {
+        const lista = document.getElementById('lista');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item.Nombre;
+          lista.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
