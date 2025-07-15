@@ -2,10 +2,10 @@ const sql = require('mssql');
 
 module.exports = async function (context, req) {
     const config = {
-        user: 'TU_USUARIO',
-        password: 'TU_CONTRASEÑA',
-        server: 'TU_SERVIDOR.database.windows.net',
-        database: 'TU_BD',
+        user: 'expo_plataformas',
+        password: '984220336M@rco.',
+        server: 'expo-plataformas.database.windows.net',
+        database: 'bd_expofinal',
         options: {
             encrypt: true
         }
